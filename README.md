@@ -52,9 +52,9 @@ return granted string if you gave permissions to access calendar, return null if
 ```
 import { addEventsToCalendar } from 'expo-calendar-helper';
 
-addEvent = (nameCalendarStore, contactName, startDate, endDate) => {
+addEvent = (nameCalendarStore, eventTitle, startDate, endDate) => {
     try {
-      addEventsToCalendar(nameCalendarStore, contactName, startDate, endDate);
+      addEventsToCalendar(nameCalendarStore, eventTitle, startDate, endDate);
     } catch (e) {
       console.log(e.message);
     }
