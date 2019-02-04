@@ -1,0 +1,25 @@
+{
+  "name": "expo-calendar-helper",
+  "version": "0.1.0",
+  "description": "Helpers to Expo.Calendar: askPermissionsAsync, newCalendar, deleteCalendarId, addEventsToCalendar ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtilaDev/expo-calendar-helper.git"
+  },
+  "keywords": [
+    "expo",
+    "calendar",
+    "react",
+    "native"
+  ],
+  "author": "Leandro Favre <atiladevelop@gmail.com> (https://github.com/AtilaDev/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AtilaDev/expo-calendar-helper/issues"
+  },
+  "homepage": "https://github.com/AtilaDev/expo-calendar-helper#readme"
+}
