@@ -106,7 +106,7 @@ for sharing how to create an event on iOS.
 
 #### Expo Team
 
-for creating a great framework to work with native react.
+for creating a great framework to work with react native.
 
 #
 
