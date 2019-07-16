@@ -2,6 +2,12 @@
 
 This package will help you to ask permissions to access to calendar and reminders, create new calendar, add events to calendar and delete that one by calendarId.
 
+#
+
+### Update to Expo SDK33
+
+#
+
 ### Installation
 
 ```

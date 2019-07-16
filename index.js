@@ -1,5 +1,8 @@
 import { Platform } from 'react-native';
-import { Permissions, Calendar, SecureStore, Localization } from 'expo';
+import * as Permissions from 'expo-permissions';
+import * as Calendar from 'expo-calendar';
+import * as SecureStore from 'expo-secure-store';
+import * as Localization from 'expo-localization';
 
 _askForCalendarPermissions = async () => {
   const response = await Permissions.askAsync(Permissions.CALENDAR);

@@ -1,6 +1,6 @@
 {
   "name": "expo-calendar-helper",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Helpers to Expo.Calendar: askPermissionsAsync, newCalendar, deleteCalendarId, addEventsToCalendar ",
   "main": "index.js",
   "scripts": {
@@ -14,12 +14,24 @@
     "expo",
     "calendar",
     "react",
-    "native"
+    "native",
+    "permissions",
+    "android",
+    "ios",
+    "securestore",
+    "alarms"
   ],
   "author": "Leandro Favre <atiladevelop@gmail.com> (https://github.com/AtilaDev/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/AtilaDev/expo-calendar-helper/issues"
   },
-  "homepage": "https://github.com/AtilaDev/expo-calendar-helper#readme"
+  "homepage": "https://github.com/AtilaDev/expo-calendar-helper#readme",
+  "devDependencies": {
+    "expo": "^33.0.0",
+    "expo-calendar": "^5.0.1",
+    "expo-localization": "^5.0.1",
+    "expo-permissions": "^5.0.1",
+    "expo-secure-store": "^5.0.1"
+  }
 }
