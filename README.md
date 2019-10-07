@@ -2,9 +2,11 @@
 
 This package will help you to ask permissions to access to calendar and reminders, create new calendar, add events to calendar and delete that one by calendarId.
 
+### Version 0.1.6: fix Event alarm.
+
 #
 
-### Update to Expo SDK33
+### Update to Expo SDK35
 
 #
 

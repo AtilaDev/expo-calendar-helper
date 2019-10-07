@@ -151,7 +151,13 @@ export const addEventsToCalendar = async (
     title: eventTitle,
     startDate: eventStartDate,
     endDate: eventEndDate,
-    timeZone: Localization.timezone
+    timeZone: Localization.timezone,
+    alarms: [
+      {
+        relativeOffset: 0,
+        method: Calendar.AlarmMethod.ALERT
+      }
+    ]
   };
 
   try {
