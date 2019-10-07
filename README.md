@@ -2,7 +2,7 @@
 
 This package will help you to ask permissions to access to calendar and reminders, create new calendar, add events to calendar and delete that one by calendarId.
 
-### Version 0.1.6: fix Event alarm.
+### Version 0.1.8: fix Event alarm.
 
 #
 
