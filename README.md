@@ -1,12 +1,8 @@
-# expo-calendar-helper
+# expo-calendar-helper <img alt="expo-calendar-helper version" src="https://img.shields.io/npm/v/expo-calendar-helper.svg?style=flat-square&label=Version&labelColor=000000&color=d35400">
 
 This package will help you to ask permissions to access to calendar and reminders, create new calendar, add events to calendar and delete that one by calendarId.
 
-### Version 0.1.8: fix Event alarm.
-
-#
-
-### Update to Expo SDK35
+### Update to Expo SDK36
 
 #
 
@@ -49,9 +45,9 @@ return granted string if you gave permissions to access calendar, return null if
 
 - calendarTitle: Calendar title
 - calendarColor: Calendar color
-- nameCalendarStore: name to save in the mobile using Expo.SecureStore
+- nameCalendarStore: name to save in the mobile using SecureStore
   inside "nameCalendarStore" is stored the calendarId, you can get it using
-  Expo.SecureStore.getItemAsync()
+  SecureStore.getItemAsync()
 
 #
 
@@ -76,7 +72,7 @@ addEvent = (nameCalendarStore, eventTitle, startDate, endDate) => {
 this receive four parameters:
 
 - nameCalendarStore: name to load the calendarId from the mobile using
-  Expo.SecureStore saved in the mobile created using newCalendar()
+  SecureStore saved in the mobile created using newCalendar()
 - eventTitle: event title
 - eventStartDate: event start date
 - eventEndDate: event end date
@@ -98,7 +94,7 @@ deleteCalendarId(nameCalendarStore);
 this receive one parameter:
 
 - nameCalendarStore: name to load the calendarId from the mobile using
-  Expo.SecureStore saved in the mobile created using newCalendar()
+  SecureStore saved in the mobile created using newCalendar()
 
 #
 

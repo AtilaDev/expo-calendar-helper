@@ -1,21 +1,21 @@
-import { Platform } from 'react-native';
-import * as Permissions from 'expo-permissions';
-import * as Calendar from 'expo-calendar';
-import * as SecureStore from 'expo-secure-store';
-import * as Localization from 'expo-localization';
+import { Platform } from "react-native";
+import * as Permissions from "expo-permissions";
+import * as Calendar from "expo-calendar";
+import * as SecureStore from "expo-secure-store";
+import * as Localization from "expo-localization";
 
 _askForCalendarPermissions = async () => {
   const response = await Permissions.askAsync(Permissions.CALENDAR);
-  return response.status === 'granted';
+  return response.status === "granted";
 };
 
 _askForReminderPermissions = async () => {
-  if (Platform.OS === 'android') {
+  if (Platform.OS === "android") {
     return true;
   }
 
   const response = await Permissions.askAsync(Permissions.REMINDERS);
-  return response.status === 'granted';
+  return response.status === "granted";
 };
 
 _findCalendars = async () => {
@@ -36,12 +36,12 @@ _createNewCalendar = async (calendars, calendarTitle, calendarColor) => {
     entityType: Calendar.EntityTypes.EVENT,
     color: calendarColor,
     sourceId:
-      Platform.OS === 'ios'
-        ? calendars.find(cal => cal.source && cal.source.name === 'iCloud')
+      Platform.OS === "ios"
+        ? calendars.find(cal => cal.source && cal.source.name === "iCloud")
             .source.id
         : undefined,
     source:
-      Platform.OS === 'android'
+      Platform.OS === "android"
         ? {
             name: calendars.find(
               cal => cal.accessLevel === Calendar.CalendarAccessLevel.OWNER
@@ -52,7 +52,7 @@ _createNewCalendar = async (calendars, calendarTitle, calendarColor) => {
     name: calendarTitle,
     accessLevel: Calendar.CalendarAccessLevel.OWNER,
     ownerAccount:
-      Platform.OS === 'android'
+      Platform.OS === "android"
         ? calendars.find(
             cal => cal.accessLevel == Calendar.CalendarAccessLevel.OWNER
           ).ownerAccount
@@ -81,7 +81,7 @@ export const askPermissionsAsync = async () => {
   const reminderGranted = await this._askForReminderPermissions();
 
   if (calendarGranted && reminderGranted) {
-    return 'granted';
+    return "granted";
   } else {
     return null;
   }
