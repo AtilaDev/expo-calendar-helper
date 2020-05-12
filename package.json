@@ -1,6 +1,6 @@
 {
   "name": "expo-calendar-helper",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Helpers to Expo Calendar: askPermissionsAsync, newCalendar, deleteCalendarId, addEventsToCalendar ",
   "main": "index.js",
   "repository": {
