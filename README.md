@@ -2,7 +2,7 @@
 
 This package will help you to ask permissions to access to calendar and reminders, create new calendar, add events to calendar and delete that one by calendarId.
 
-### Update to Expo SDK37
+### Update to Expo SDK40
 
 #
 
@@ -110,7 +110,7 @@ for sharing how to create an event on iOS.
 
 #### Expo Team
 
-To develop a great framework to work with react native.
+for develop a great framework to work with react native.
 
 ## Licensing
 

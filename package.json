@@ -1,6 +1,6 @@
 {
   "name": "expo-calendar-helper",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Helpers to Expo Calendar: askPermissionsAsync, newCalendar, deleteCalendarId, addEventsToCalendar ",
   "main": "index.js",
   "repository": {
@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/AtilaDev/expo-calendar-helper#readme",
   "devDependencies": {
-    "expo": "^37.0.10",
-    "expo-calendar": "^8.1.0",
-    "expo-localization": "^8.1.0",
-    "expo-permissions": "^8.1.0",
-    "expo-secure-store": "^8.1.0"
+    "expo": "^40.0.0",
+    "expo-calendar": "^9.0.0",
+    "expo-localization": "^10.0.0",
+    "expo-permissions": "^11.0.0",
+    "expo-secure-store": "^10.0.0"
   }
 }

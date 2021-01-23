@@ -1,21 +1,21 @@
-import { Platform } from "react-native";
-import * as Permissions from "expo-permissions";
-import * as Calendar from "expo-calendar";
-import * as SecureStore from "expo-secure-store";
-import * as Localization from "expo-localization";
+import { Platform } from 'react-native';
+import * as Permissions from 'expo-permissions';
+import * as Calendar from 'expo-calendar';
+import * as SecureStore from 'expo-secure-store';
+import * as Localization from 'expo-localization';
 
 _askForCalendarPermissions = async () => {
   const response = await Permissions.askAsync(Permissions.CALENDAR);
-  return response.status === "granted";
+  return response.status === 'granted';
 };
 
 _askForReminderPermissions = async () => {
-  if (Platform.OS === "android") {
+  if (Platform.OS === 'android') {
     return true;
   }
 
   const response = await Permissions.askAsync(Permissions.REMINDERS);
-  return response.status === "granted";
+  return response.status === 'granted';
 };
 
 _findCalendars = async () => {
@@ -36,36 +36,34 @@ _createNewCalendar = async (calendars, calendarTitle, calendarColor) => {
     entityType: Calendar.EntityTypes.EVENT,
     color: calendarColor,
     sourceId:
-      Platform.OS === "ios"
-        ? calendars.find(cal => cal.source && cal.source.name === "iCloud")
+      Platform.OS === 'ios'
+        ? calendars.find((cal) => cal.source && cal.source.name === 'iCloud')
             .source.id
         : undefined,
     source:
-      Platform.OS === "android"
+      Platform.OS === 'android'
         ? {
             name: calendars.find(
-              cal => cal.accessLevel === Calendar.CalendarAccessLevel.OWNER
+              (cal) => cal.accessLevel === Calendar.CalendarAccessLevel.OWNER
             ).source.name,
-            isLocalAccount: true
+            isLocalAccount: true,
           }
         : undefined,
     name: calendarTitle,
     accessLevel: Calendar.CalendarAccessLevel.OWNER,
     ownerAccount:
-      Platform.OS === "android"
+      Platform.OS === 'android'
         ? calendars.find(
-            cal => cal.accessLevel == Calendar.CalendarAccessLevel.OWNER
+            (cal) => cal.accessLevel == Calendar.CalendarAccessLevel.OWNER
           ).ownerAccount
-        : undefined
+        : undefined,
   };
 
   let calendarId = null;
 
   try {
     calendarId = await Calendar.createCalendarAsync(newCalendar);
-  } catch (e) {
-    // console.log(e.message);
-  }
+  } catch (e) {}
 
   return calendarId;
 };
@@ -81,7 +79,7 @@ export const askPermissionsAsync = async () => {
   const reminderGranted = await this._askForReminderPermissions();
 
   if (calendarGranted && reminderGranted) {
-    return "granted";
+    return 'granted';
   } else {
     return null;
   }
@@ -121,7 +119,7 @@ export const newCalendar = async (
 // * nameCalendarStore: name to load the calendarId from the mobile using
 //   Expo.SecureStore saved in the mobile created using newCalendar()
 // --------------------------------------------------------------------------
-export const deleteCalendarId = async nameCalendarStore => {
+export const deleteCalendarId = async (nameCalendarStore) => {
   const calendarId = await SecureStore.getItemAsync(nameCalendarStore);
   if (calendarId) {
     await Calendar.deleteCalendarAsync(calendarId);
@@ -155,14 +153,12 @@ export const addEventsToCalendar = async (
     alarms: [
       {
         relativeOffset: 0,
-        method: Calendar.AlarmMethod.ALERT
-      }
-    ]
+        method: Calendar.AlarmMethod.ALERT,
+      },
+    ],
   };
 
   try {
     await Calendar.createEventAsync(calendarId, event);
-  } catch (e) {
-    // console.log(e);
-  }
+  } catch (e) {}
 };
