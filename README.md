@@ -1,4 +1,4 @@
-# This package has been deprecated in favor to https://www.npmjs.com/package/@atiladev/usecalendar
+### This package has been deprecated in favor to [useCalendar Hook](https://www.npmjs.com/package/@atiladev/usecalendar)
 
 # expo-calendar-helper <img alt="expo-calendar-helper version" src="https://img.shields.io/npm/v/expo-calendar-helper.svg?style=flat-square&label=Version&labelColor=000000&color=d35400">
 
