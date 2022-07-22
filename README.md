@@ -1,3 +1,5 @@
+# This package has been deprecated in favor to https://www.npmjs.com/package/@atiladev/usecalendar
+
 # expo-calendar-helper <img alt="expo-calendar-helper version" src="https://img.shields.io/npm/v/expo-calendar-helper.svg?style=flat-square&label=Version&labelColor=000000&color=d35400">
 
 This package will help you to ask permissions to access to calendar and reminders, create new calendar, add events to calendar and delete that one by calendarId.
