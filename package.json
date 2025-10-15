@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/AtilaDev/expo-calendar-helper#readme",
   "devDependencies": {
-    "expo": "^40.0.0",
+    "expo": "^48.0.0",
     "expo-calendar": "^9.0.0",
     "expo-localization": "^10.0.0",
     "expo-permissions": "^11.0.0",
